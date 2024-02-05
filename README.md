@@ -70,7 +70,8 @@ This script will help You increase the font size in the editor window to make th
     changeFontSize();
 })();
 ```
-
+To make the font even larger, its size can be set using the fontSize and fontSize_autocomplete parameters.
+<br/><br/>
 4. Fourthly press the "File" -> "Save" button to save the script.
 <div style="display: flex;">
   <img src="/pictures/save_script.png" alt="Save script" style="width: 98%;">
@@ -83,3 +84,5 @@ This script will help You increase the font size in the editor window to make th
   <img src="/pictures/enable_script_2.png" alt="Enable script" style="width: 49%;">
   </div>
 <br/><br/>
+
+Now, when the page loads, the fonts will be loaded in the size set in the script and you no longer need to go to the developer menu to change them every time.
