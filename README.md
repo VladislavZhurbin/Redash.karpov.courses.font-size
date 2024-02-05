@@ -88,6 +88,6 @@ To make the font even larger, its size can be set using the fontSize and fontSiz
 Now, when the page loads, the fonts will be loaded in the size set in the script and you no longer need to go to the developer menu to change them every time.
 If you liked this repository, please give it a star as shown in the screenshot below.
 <div style="display: flex;">
-  <img src="/pictures/starred_repo.png" alt="Enable script" style="width: 98%;">
+  <img src="/pictures/starred_repo.png" alt="Starred repo" style="width: 98%;">
   </div>
 <br/><br/>
