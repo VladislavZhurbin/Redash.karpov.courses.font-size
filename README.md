@@ -1,23 +1,32 @@
 # Redash.karpov.courses.font-size
-This script will help you change the font size in the editor window to make the coding process more convenient.
+This script will help You increase the font size in the editor window to make the coding process more convenient.
 
 <div style="display: flex;">
   <img src="/pictures/Redash_fonts_size_before.png" alt="Before" style="width: 49%;">
   <img src="/pictures/Redash_fonts_size_after.png" alt="After" style="width: 49%;">
 </div>
 <br/><br/>
-1. Firstly You should install Tampermonkey extension for your web browser  
+1. Firstly install Tampermonkey extension for your web browser  
 
    For Google Chrome: https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US&utm_source=ext_sidebar  
    For Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=ru  
-
+2. Secondly open Tampermonkey settings
+<div style="display: flex;">
+  <img src="/pictures/setup.png" alt="Settings" style="width: 98%;">
+  </div>
+<br/><br/>
+3. Firdly press the “Create a new script...” button and paste the script from the window below here.
+<div style="display: flex;">
+  <img src="/pictures/new_script.png" alt="Create a new script" style="width: 98%;">
+  </div>
+<br/><br/>
 
 ```
 // ==UserScript==
 // @name         Redash.karpov.courses.font-size
 // @namespace    your-namespace
 // @version      1.0
-// @description  Увеличивает размер шрифта в окне написания SQL запроса в Redash
+// @description  Increases the font size in the SQL query writing window in Redash
 // @match        https://redash.public.karpov.courses/queries/*
 // @grant        none
 // ==/UserScript==
@@ -25,11 +34,11 @@ This script will help you change the font size in the editor window to make the 
 (function() {
     'use strict';
 
-    // Установите желаемый размер шрифта в пикселях
+    // Set the desired font size in pixels
     var fontSize = '20px';
     var fontSize_autocomplete = '18px';
 
-    // Функция для изменения размера шрифта
+    // Function to change font size
     function changeFontSize() {
         var editor = document.getElementsByClassName('ace_editor')[0];
         if (editor) {
@@ -43,7 +52,7 @@ This script will help you change the font size in the editor window to make the 
         }
     }
 
-    // Ожидаем загрузку элемента с помощью MutationObserver
+    // Waiting for the element to load using MutationObserver
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.addedNodes && mutation.addedNodes.length > 0) {
@@ -52,12 +61,25 @@ This script will help you change the font size in the editor window to make the 
         });
     });
 
-    // Находим элемент с классом "ace_editor" и начинаем наблюдение за изменениями
+    // Find an element with the "ace_editor" class and start monitoring the changes
     var targetNode = document.body;
     var config = { childList: true, subtree: true };
     observer.observe(targetNode, config);
 
-    // Изменяем размер шрифта сразу после загрузки страницы
+    // Changing the font size immediately after the page loads
     changeFontSize();
 })();
 ```
+
+4. Fourthly press the "File" -> "Save" button to save the script.
+<div style="display: flex;">
+  <img src="/pictures/save_script.png" alt="Save script" style="width: 98%;">
+  </div>
+<br/><br/>
+
+5. Fifthly, make sure that the Enabled button has been pressed in one of two places.
+<div style="display: flex;">
+  <img src="/pictures/enable_script_1.png" alt="Enable script" style="width: 49%;">
+  <img src="/pictures/enable_script_2.png" alt="Enable script" style="width: 49%;">
+  </div>
+<br/><br/>
