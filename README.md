@@ -1,6 +1,15 @@
 # Redash.karpov.courses.font-size
 This script will help you change the font size in the editor window to make the coding process more convenient.
 
+![Before](Redash_fonts_size_before.png "Before")
+![After](Redash_fonts_size_after.png "After")
+
+1. Firstly You should install Tampermonkey extension for your web browser  
+   For Google Chrome: https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US&utm_source=ext_sidebar  
+   For Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=ru  
+
+
+```
 // ==UserScript==
 // @name         Redash.karpov.courses.font-size
 // @namespace    your-namespace
@@ -48,3 +57,4 @@ This script will help you change the font size in the editor window to make the 
     // Изменяем размер шрифта сразу после загрузки страницы
     changeFontSize();
 })();
+```
